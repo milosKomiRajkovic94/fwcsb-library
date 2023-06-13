@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# FWCSB (Football World Cup Score Board) as a simple library
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
