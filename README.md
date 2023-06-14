@@ -1,6 +1,16 @@
 # FWCSB (Football World Cup Score Board) as a simple library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Code challange description
+
+Code challange description is available at: "Coding Exercise v1.4 Frontend.pdf" file (useful info: to display .pdf file in VSCode IDE, use vscode-pdf extension).
+
+# Project structure
+
+Even though `create-react-app` tool is deprecated (https://blog.bitsrc.io/the-future-of-react-why-create-react-app-is-deprecated-and-hooks-are-the-future-83e8a087a325) from recently, and the usage of Next.js or Vite is advised to be used in order to increase the overall perforamnces of the app. I stil decided to use `create-react-app` in creation of the project, because of:
+
+1. As stated in guidelines of task, we are not using any REST API, for our data, but local collections, so there is no need for SSR (server side rendering) as a performance booster, which are adventages of Next.js and Vite;
+
+2. Keep it simple, was the guideline you put in the description of the code challenge task, so I strived for that. Because a CRA tool provides pure React project without any benefits or constraints of both Next.js or Vite;
 
 ## Available Scripts
 
