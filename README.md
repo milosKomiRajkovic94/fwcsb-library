@@ -4,6 +4,12 @@
 
 Code challange description is available at: "Coding Exercise v1.4 Frontend.pdf" file (useful info: to display .pdf file in VSCode IDE, use vscode-pdf extension).
 
+## How I understand a task
+
+So, when a user fils in the first two fields (names of teams), he clicks the "Start game" button then the next two fields are enabled (scores of teams), who were previously disabled, and the first two fields (names of the teams) are disabled. After entering score of the teams and clicking "Finish" game, is going to update the score list of "Football World Cup Score Board", who was previouisly empty. 
+
+Why, I didn't count on some automatic infinite insertion of the data, is because of the names of the teams, who would most likely not be sensible or being repeated after a while even though that is not our wish. Also it said: "We are NOT looking for a REST API, a Web Service or Microservice. Just a simple  implementation."
+
 # Project structure
 
 Even though `create-react-app` tool is deprecated (https://blog.bitsrc.io/the-future-of-react-why-create-react-app-is-deprecated-and-hooks-are-the-future-83e8a087a325) from recently, and the usage of Next.js or Vite is advised to be used in order to increase the overall perforamnces of the app. I stil decided to use `create-react-app` in creation of the project, because of:
