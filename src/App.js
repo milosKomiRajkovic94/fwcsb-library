@@ -10,6 +10,9 @@ function App() {
 
   const onClick = (event) => {
     event.preventDefault();
+    if(startedGame){
+      document.getElementById("score-board-form").reset();
+    }
     setStartedGame((prevState) => !prevState);
     console.log("App onSubmit", event, startedGame);
   }

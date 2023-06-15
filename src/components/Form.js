@@ -1,18 +1,28 @@
 const Form = ({onChange, onClick, startedGame}) => {
-    console.log('Form started game', startedGame);
     return(
-        <form>
-            <label>
-                Home team:
-                <input id="homeTeamName" type="text" name="homeTeamName" disabled={startedGame} onChange={onChange} />
-            </label>
-            <label>
-                Away team:
-                <input id="awayTeamName" type="text" name="awayTeamName" disabled={startedGame} onChange={onChange} />
-            </label>
+        <form id="score-board-form">
+            <div>
+                <label>
+                    Home team:
+                    <input id="homeTeamName" type="text" name="homeTeamName" disabled={startedGame} onChange={onChange} />
+                </label>
+                <label>
+                    Away team:
+                    <input id="awayTeamName" type="text" name="awayTeamName" disabled={startedGame} onChange={onChange} />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Home team score:
+                    <input id="homeTeamScore" type="number" name="homeTeamScore" defaultValue={startedGame ? 0 : undefined} disabled={!startedGame} onChange={onChange} />
+                </label>
+                <label>
+                    Away team score:
+                    <input id="awayTeamScore" type="number" name="awayTeamScore" defaultValue={startedGame ? 0 : undefined} disabled={!startedGame} onChange={onChange} />
+                </label>
+            </div>
             <div>
             <label>
-                
                 <input type="button" onClick={onClick} value={`${startedGame ? "Finish" : "Start"} game`}/>
             </label>
             </div>
