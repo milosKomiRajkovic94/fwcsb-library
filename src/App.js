@@ -14,7 +14,7 @@ const App = () => {
   const [currentScore, setCurrentScore] = useState(currentScoreSkeleton)
   const [scoreTableData, setScoreTableData] = useState([]);
 
-  function sortGamesByScore(games) {
+  const sortGamesByScore = (games) => {
     games.sort((game1, game2) => {
       const totalScore1 = Number(game1.homeTeamScore) + Number(game1.awayTeamScore);
       const totalScore2 = Number(game2.homeTeamScore) + Number(game2.awayTeamScore);
