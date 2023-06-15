@@ -14,11 +14,11 @@ const Form = ({onChange, onClick, startedGame}) => {
             <div>
                 <label>
                     Home team score:
-                    <input id="homeTeamScore" type="number" name="homeTeamScore" defaultValue={startedGame ? 0 : undefined} disabled={!startedGame} onChange={onChange} />
+                    <input id="homeTeamScore" type="number" min={0} name="homeTeamScore" defaultValue={startedGame ? 0 : undefined} disabled={!startedGame} onChange={onChange} />
                 </label>
                 <label>
                     Away team score:
-                    <input id="awayTeamScore" type="number" name="awayTeamScore" defaultValue={startedGame ? 0 : undefined} disabled={!startedGame} onChange={onChange} />
+                    <input id="awayTeamScore" type="number" min={0} name="awayTeamScore" defaultValue={startedGame ? 0 : undefined} disabled={!startedGame} onChange={onChange} />
                 </label>
             </div>
             <div>
