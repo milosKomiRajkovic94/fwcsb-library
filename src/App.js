@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Form from './components/Form';
+import ScoreList from './components/ScoreList';
 
 const App = () => {
   const currentScoreSkeleton = {
@@ -11,6 +12,21 @@ const App = () => {
   const[startedGame, setStartedGame] = useState(false);
   const[currentScore, setCurrentScore] = useState(currentScoreSkeleton)
   const[scoreTableData, setScoreTableData] = useState([]);
+
+  function sortGamesByScore(games) {
+    games.sort((game1, game2) => {
+      const totalScore1 = Number(game1.homeTeamScore) + Number(game1.awayTeamScore);
+      const totalScore2 = Number(game2.homeTeamScore) + Number(game2.awayTeamScore);
+      
+      if (totalScore1 === totalScore2) {
+        return games.indexOf(game2) - games.indexOf(game1);
+      }
+      
+      return totalScore2 - totalScore1; 
+    });
+  
+    return games;
+  }
 
   const onChange = (event) => {
     setCurrentScore((prevState) => ({
@@ -26,14 +42,12 @@ const App = () => {
       document.getElementById("score-board-form").reset();
     }
     setStartedGame((prevState) => !prevState);
-    console.log("App onSubmit", event, startedGame);
   }
-
-  console.log('Updated scoreTableData', scoreTableData, JSON.stringify(scoreTableData));
 
   return (
     <div className="App">
       <Form onChange={onChange} onClick={onClick} startedGame={startedGame} />
+      <ScoreList sortedScores={sortGamesByScore(scoreTableData)} />
     </div>
   );
 }
